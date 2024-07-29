@@ -80,5 +80,19 @@ while (x < 1) {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Extra Credit - Binary Numbers */
-// To Be Completed Later
-// Test
+let decimal = Number(process.argv[2]);
+let calcNum = decimal;
+let binary = '';
+
+while (calcNum > 0) {
+  let remainder = calcNum % 2;
+  binary = remainder.toString() + binary;
+
+  console.log(calcNum, '% 2 =', remainder, '---', binary);
+  console.log(calcNum, '/ 2 =', Math.floor(calcNum / 2));
+  console.log('');
+  calcNum = Math.floor(calcNum / 2);
+}
+
+console.log('Number in decimal:', decimal);
+console.log('Number in binary:', binary);
